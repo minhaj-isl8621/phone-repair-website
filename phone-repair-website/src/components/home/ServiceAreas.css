@@ -1,0 +1,107 @@
+.service-areas {
+  background-color: var(--white);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.area-card {
+  background-color: var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+  border: 1px solid var(--medium-gray);
+}
+
+.area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-green-light);
+}
+
+.area-city {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.city-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.city-state {
+  font-size: 0.875rem;
+  color: var(--light-text);
+  font-weight: 400;
+}
+
+.area-description {
+  font-size: 0.875rem;
+  color: var(--light-text);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.area-link {
+  color: var(--primary-green);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.area-link:hover {
+  color: var(--primary-green-dark);
+}
+
+@media (max-width: 768px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.areas-view-all {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.areas-view-all .view-all-link {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--primary-green);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.areas-view-all .view-all-link:hover {
+  background: var(--primary-green-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.areas-seo-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  color: var(--light-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.areas-seo-text strong {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .areas-seo-text {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+  }
+}

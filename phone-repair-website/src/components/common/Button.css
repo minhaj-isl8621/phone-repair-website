@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background-color: var(--primary-green-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.btn--secondary:hover {
+  background-color: var(--primary-green-light);
+  transform: translateY(-2px);
+}
+
+/* New dark button variant */
+.btn--dark {
+  background-color: #1a2634;
+  color: var(--white);
+  border: 2px solid #1a2634;
+}
+
+.btn--dark:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,114 @@
+.request-quote {
+  text-align: center;
+}
+
+/* Navy option */
+.cta-navy {
+  background: linear-gradient(135deg, #1a2634 0%, #2d3748 100%);
+  color: var(--white);
+}
+
+/* Light gray option (alternative - comment out navy and use this if preferred) */
+.cta-light {
+  background: var(--light-gray);
+  color: var(--dark-text);
+}
+
+.quote-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-navy .quote-title {
+  color: var(--white);
+}
+
+.cta-light .quote-title {
+  color: var(--dark-text);
+}
+
+.quote-text {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-navy .quote-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-light .quote-text {
+  color: var(--light-text);
+}
+
+.quote-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.quote-btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure both buttons have identical styling except colors */
+.cta-navy .quote-btn.btn--primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: 2px solid var(--primary-green);
+}
+
+.cta-navy .quote-btn.btn--secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.cta-navy .quote-btn.btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quote-note {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.cta-navy .quote-note {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-light .quote-note {
+  color: var(--light-text);
+}
+
+@media (max-width: 576px) {
+  .quote-title {
+    font-size: 2rem;
+  }
+
+  .quote-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

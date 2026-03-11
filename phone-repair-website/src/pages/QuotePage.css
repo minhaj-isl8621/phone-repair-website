@@ -1,0 +1,14 @@
+.submit-error {
+  background-color: #fee;
+  color: #c00;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  border: 1px solid #fcc;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

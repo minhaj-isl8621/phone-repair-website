@@ -1,0 +1,63 @@
+.about-hero {
+  background: linear-gradient(135deg, var(--dark-text) 0%, #2d3748 100%);
+  color: var(--white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.about-hero-title {
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-story {
+  background: var(--white);
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-content h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.story-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.value-card {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--light-gray);
+  border-radius: var(--radius-lg);
+}
+
+.value-card h3 {
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
