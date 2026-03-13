@@ -33,7 +33,8 @@ const QuotePage = () => {
     setSubmitError(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/quote', {
+      const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+      const response = await fetch(`${API_URL}/api/quote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +101,7 @@ const QuotePage = () => {
 
       <section className="quote-form-section section">
         <Container>
-          <form onSubmit={handleSubmit} className="quote-form">
+          <form onSubmit={handleSubmit} className="quote-form mobile-optimized-form">
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="fullName">Full Name *</label>

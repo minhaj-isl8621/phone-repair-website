@@ -27,7 +27,7 @@ const Header = () => {
         <div className="header-content">
           <div className="logo">
             <Link to="/">
-              <span className="logo-text">Phone Repair</span>
+              <span className="logo-text">HomeService Phone Repair NJ</span>
               <span className="logo-tagline">We Drive To You</span>
             </Link>
           </div>
@@ -55,8 +55,13 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
+              <li className="nav-item mobile-phone-item">
+                <a href="tel:+18622824335" className="nav-link mobile-phone-link">
+                  (862) 282-4335
+                </a>
+              </li>
             </ul>
-            <div className="nav-cta">
+            <div className="nav-cta desktop-only">
               <Button 
                 href="tel:+18622824335" 
                 variant="primary"

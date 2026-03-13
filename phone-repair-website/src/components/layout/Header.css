@@ -19,10 +19,13 @@
   line-height: 1.2;
 }
 
+/* Updated for longer business name */
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary-green);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .logo-tagline {
@@ -102,7 +105,26 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .logo-text {
+    font-size: 1.1rem;
+    white-space: normal;
+    max-width: 200px;
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
+  .logo-text {
+    font-size: 1rem;
+    max-width: 160px;
+  }
+  
+  .logo-tagline {
+    font-size: 0.75rem;
+  }
+
   .mobile-menu-btn {
     display: flex;
   }
@@ -116,11 +138,12 @@
     height: 100vh;
     background: var(--white);
     flex-direction: column;
-    justify-content: center;
-    padding: var(--spacing-2xl);
+    justify-content: flex-start;
+    padding: var(--spacing-lg) var(--spacing-lg);
     box-shadow: var(--shadow-xl);
     transition: right 0.3s ease;
     gap: var(--spacing-xl);
+    overflow-y: auto;
   }
 
   .nav-menu.active {
@@ -129,19 +152,31 @@
 
   .nav-list {
     flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-lg);
+    gap: 0; /* Remove gap, use padding on items instead */
+    width: 100%;
   }
 
   .nav-item {
     width: 100%;
     text-align: center;
+    padding: 0.5rem 0; /* Reduced from previous spacing */
   }
 
   .nav-link {
-    font-size: 1.25rem;
+    font-size: 1.1rem; /* Slightly smaller than before */
     display: block;
-    padding: var(--spacing-sm);
+    padding: 0.4rem 0; /* Reduced vertical padding */
+  }
+
+  .mobile-phone-item {
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--medium-gray);
+    padding-top: 0.75rem;
+  }
+
+  .mobile-phone-link {
+    color: var(--primary-green) !important;
+    font-weight: 600;
   }
 
   .nav-cta {
@@ -151,5 +186,15 @@
   .nav-cta .btn {
     width: 100%;
   }
+
+  .desktop-only {
+    display: none;
+  }
 }
 
+/* Desktop styles - hide mobile phone item */
+@media (min-width: 769px) {
+  .mobile-phone-item {
+    display: none;
+  }
+}
