@@ -19,18 +19,41 @@
   line-height: 1.2;
 }
 
-/* Updated for longer business name */
+/* Refined logo/brand styling */
 .logo-text {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--primary-green);
   line-height: 1.2;
   white-space: nowrap;
+  letter-spacing: -0.02em; /* Slight tightening for logo feel */
+  text-transform: none;
+  display: inline-block;
 }
 
 .logo-tagline {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--light-text);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+/* For larger screens, ensure one line and slightly larger */
+@media (min-width: 1024px) {
+  .logo-text {
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Adjust for medium screens if needed */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .logo-text {
+    font-size: 1.3rem;
+    white-space: normal; /* Allow wrap if absolutely necessary */
+    max-width: 280px;
+  }
 }
 
 .nav-menu {
@@ -108,21 +131,23 @@
 /* Tablet adjustments */
 @media (max-width: 1024px) {
   .logo-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     white-space: normal;
-    max-width: 200px;
+    max-width: 220px;
   }
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .logo-text {
-    font-size: 1rem;
-    max-width: 160px;
+    font-size: 1.1rem;
+    white-space: normal;
+    max-width: 180px;
+    letter-spacing: -0.01em;
   }
   
   .logo-tagline {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .mobile-menu-btn {
@@ -152,20 +177,20 @@
 
   .nav-list {
     flex-direction: column;
-    gap: 0; /* Remove gap, use padding on items instead */
+    gap: 0;
     width: 100%;
   }
 
   .nav-item {
     width: 100%;
     text-align: center;
-    padding: 0.5rem 0; /* Reduced from previous spacing */
+    padding: 0.5rem 0;
   }
 
   .nav-link {
-    font-size: 1.1rem; /* Slightly smaller than before */
+    font-size: 1.1rem;
     display: block;
-    padding: 0.4rem 0; /* Reduced vertical padding */
+    padding: 0.4rem 0;
   }
 
   .mobile-phone-item {

@@ -33,8 +33,7 @@ const QuotePage = () => {
     setSubmitError(null);
 
     try {
-      const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
-      const response = await fetch(`${API_URL}/api/quote`, {
+      const response = await fetch('https://formspree.io/f/mlgplnjl', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,12 +41,11 @@ const QuotePage = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
         setFormSubmitted(true);
       } else {
-        setSubmitError(data.message || 'Something went wrong. Please try again.');
+        const data = await response.json();
+        setSubmitError(data.error || 'Something went wrong. Please try again.');
       }
     } catch (error) {
       console.error('Submission error:', error);
