@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
             <div className="footer-contact">
               <a href="tel:+18622824335" className="footer-phone">(862) 282-4335</a>
-              <p className="footer-hours">Open Daily: 9:00 AM – 11:00 PM</p>
+              <p className="footer-hours">Open 24 Hours</p>
             </div>
           </div>
 
