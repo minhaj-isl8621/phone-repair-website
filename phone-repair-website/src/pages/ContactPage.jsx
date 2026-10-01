@@ -20,7 +20,7 @@ const ContactPage = () => {
             <div className="contact-card">
               <h2>Call Us</h2>
               <p className="contact-phone">(862) 282-4335</p>
-              <p>Open Daily: 9:00 AM – 11:00 PM</p>
+              <p>Open 24 Hours</p>
               <Button href="tel:+18622824335" variant="primary">Call Now</Button>
             </div>
 
